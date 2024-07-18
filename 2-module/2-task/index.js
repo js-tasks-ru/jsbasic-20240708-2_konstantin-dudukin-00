@@ -1,3 +1,8 @@
-function isEmpty(obj) {
-  // ваш код...
+function isEmpty(schedule) {
+
+  for(let key in schedule) {
+    return false;
+  }
+  
+  return true;
 }
