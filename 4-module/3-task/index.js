@@ -4,20 +4,20 @@ function highlight(table) {
   // Проходим по Status
   for (let i = 1; i < table.rows.length; i++) {
     if(tableRows[i].children[3].dataset.available === 'true') {
-      tableRows[i].children[3].classList.add('available');
+      tableRows[i].classList.add('available');
     } else if(tableRows[i].children[3].dataset.available === 'false') {
-      tableRows[i].children[3].classList.add('unavailable');
+      tableRows[i].classList.add('unavailable');
     } else if(tableRows[i].children[3].dataset.available === undefined) {
-        tableRows[i].children[3].hidden = true;
+        tableRows[i].hidden = true;
     }
   }
 
   // Проходим по Gender
   for (let i = 1; i < table.rows.length; i++) {
     if(tableRows[i].children[2].innerText === 'm') {
-      tableRows[i].children[2].classList.add('male');
+      tableRows[i].classList.add('male');
     } else {
-      tableRows[i].children[2].classList.add('female');
+      tableRows[i].classList.add('female');
     }
   }
 
@@ -26,7 +26,7 @@ function highlight(table) {
     let age = tableRows[i].children[1].innerText;
 
     if(parseInt(age) <= 18) {
-      tableRows[i].children[1].style="text-decoration: line-through";
+      tableRows[i].style="text-decoration: line-through";
     }
   }
 }
